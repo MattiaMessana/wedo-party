@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Game – Punteggi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>Quiz Game – Punteggi</h1>
+            <p>Gestisci le squadre e i punteggi in tempo reale.</p>
+        </header>
+
+        <main class="app-main">
+            <!-- COLONNA SINISTRA: CONTROLLO -->
+            <section class="panel panel-left">
+                <h2>Gestione squadre</h2>
+
+                <form id="team-form" class="team-form">
+                    <input type="text" id="team-name" placeholder="Nome squadra" required>
+                    <button type="submit">Aggiungi squadra</button>
+                </form>
+
+                <ul id="team-list" class="team-list">
+                    <!-- Popolata da JS -->
+                </ul>
+
+                <div class="presets">
+                    <h3>Punti standard</h3>
+                    <p>(al momento fissi: 10, 20, -10, -20 – poi li rendiamo configurabili)</p>
+                </div>
+
+                <div class="game-actions">
+                    <button id="save-game-btn" class="btn-primary">
+                        Salva classifica parziale (fine gioco)
+                    </button>
+                </div>
+            </section>
+
+            <!-- COLONNA DESTRA: CLASSIFICHE -->
+            <section class="panel panel-right">
+                <div class="current-ranking">
+                    <h2>Classifica attuale</h2>
+                    <ol id="ranking-list" class="ranking-list">
+                        <!-- Popolata da JS -->
+                    </ol>
+                </div>
+
+                <div class="games-history">
+                    <h2>Classifiche parziali (giochi)</h2>
+                    <div id="games-container" class="games-container">
+                        <!-- Popolata da JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
