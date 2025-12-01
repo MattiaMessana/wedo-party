@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #f9fafb;
+}
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.app-header p {
+    margin: 0.25rem 0 0;
+    color: #cbd5f5;
+    font-size: 0.95rem;
+}
+
+.app-main {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* PANNELLI */
+
+.panel {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.panel-left {
+    flex: 1;
+}
+
+.panel-right {
+    flex: 1.2;
+}
+
+/* FORM SQUADRA */
+
+.team-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-form input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    background: #020617;
+    color: #f9fafb;
+}
+
+.team-form input:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.team-form button {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background: #22c55e;
+    color: #022c22;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.team-form button:hover {
+    background: #16a34a;
+}
+
+/* LISTA SQUADRE */
+
+.team-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.team-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #020617;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #1e293b;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-name {
+    font-weight: 600;
+}
+
+.team-score {
+    font-size: 0.85rem;
+    color: #e5e7eb;
+}
+
+.team-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.team-controls button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background: #1d4ed8;
+    color: #e5e7eb;
+}
+
+.team-controls button:hover {
+    background: #1e40af;
+}
+
+.team-controls .btn-minus {
+    background: #b91c1c;
+}
+
+.team-controls .btn-minus:hover {
+    background: #991b1b;
+}
+
+.team-controls .btn-remove {
+    background: transparent;
+    border-radius: 999px;
+    border: 1px solid #64748b;
+    color: #94a3b8;
+    padding: 0.25rem 0.5rem;
+}
+
+.team-controls .btn-remove:hover {
+    border-color: #f97316;
+    color: #fed7aa;
+}
+
+/* BOTTONI */
+
+.btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: none;
+    background: #ec4899;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #db2777;
+}
+
+/* CLASSIFICA ATTUALE */
+
+.current-ranking {
+    margin-bottom: 1.5rem;
+}
+
+.ranking-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.ranking-list li {
+    font-size: 1rem;
+}
+
+/* STORIA GIOCHI */
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.game-card {
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #1f2937;
+    padding: 0.5rem 0.75rem;
+}
+
+.game-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+}
+
+.game-card ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.85rem;
+}
+
+/* VARIE */
+
+.presets h3 {
+    margin: 1rem 0 0.25rem;
+}
+
+.presets p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .app-main {
+        flex-direction: column;
+    }
+}
